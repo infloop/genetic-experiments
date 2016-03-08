@@ -1,0 +1,26 @@
+{
+  "name": "neural-visualizer",
+  "homepage": "https://github.com/infloop/genetic-experiments",
+  "authors": [
+    "infloop <infloop.gm@gmail.com>"
+  ],
+  "dependencies": {
+    "three.js": "~0.71.0",
+    "jquery": "~2.1.4"
+  },
+  "description": "Visualizer for neural network",
+  "main": "index.js",
+  "moduleType": [],
+  "keywords": [
+    "neural"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "visualizer/bower_components",
+    "test",
+    "tests"
+  ]
+}
