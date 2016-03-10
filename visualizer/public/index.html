@@ -2,9 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>WebGL</title>
+    <link rel="stylesheet" href="styles/main.css" media="all">
 </head>
 <body>
-
+    <div id="controls">
+        <div class="row">
+            <button id="reset-button">Reset</button>
+        </div>
+        <div class="row">
+            <button id="train-button">Start training</button>
+        </div>
+        <div class="row">
+            <button id="stop-button">Stop</button>
+        </div>
+        <div class="row">
+            <input type="text" id="hidden-layers-input" placeholder="ex. [4,4]">
+            <button id="hidden-layers-button" >Set hidden layers</button>
+        </div>
+        <div class="row">
+            <input type="text" id="batch-size-input" placeholder="ex. 5">
+            <button id="batch-size-button" value="1">Set batch size</button>
+        </div>
+        <div class="row">
+            <input type="text" id="learning-rate-input" placeholder="ex. 0.5">
+            <button id="learning-rate-button">Set learning rate</button>
+        </div>
+    </div>
+    <div id="webgl">
+    </div>
+    <div id="info">
+        <p>
+            Error: 0
+        </p>
+        <p>
+            Iterations: 0
+        </p>
+    </div>
+    <script src="/distrib/vendor.js"></script>
+    <script src="/js/orbit.js"></script>
+    <script src="/js/brain.js"></script>
+    <script src="/js/net.js"></script>
+    <script src="/js/scene.js"></script>
+    <script src="/js/xor.js"></script>
+    <script src="/js/threes.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
 </body>
 </html>

@@ -8,17 +8,25 @@ var plugins = require("gulp-load-plugins")({
 });
 
 // Define default destination folder
-var dest = 'public/dist/';
+var dest = './visualizer/public/distrib';
 
-gulp.task('js', function() {
+gulp.task('vendorjs', function() {
 
     var jsFiles = ['src/js/*'];
 
     gulp.src(plugins.mainBowerFiles().concat(jsFiles))
-        .pipe(plugins.filter('*.js'))
-        .pipe(plugins.concat('main.js'))
-        .pipe(plugins.uglify())
-        .pipe(gulp.dest(dest + 'js'));
+        .pipe(plugins.filter('**/*.js'))
+        .pipe(plugins.print(function(filepath) {
+            return "bower files: " + filepath;
+        }))
+        //.pipe(plugins.sourcemaps.init())
+        .pipe(plugins.concat('vendor.js'))
+        //.pipe(plugins.sourcemaps.write())
+        //.pipe(plugins.uglify())
+        .pipe(plugins.print(function(filepath) {
+            return "compiled files: " + filepath;
+        }))
+        .pipe(gulp.dest(dest));
 
 });
 
@@ -33,3 +41,5 @@ gulp.task('css', function() {
         .pipe(gulp.dest(dest + 'css'));
 
 });
+
+gulp.task('default', ['vendorjs']);

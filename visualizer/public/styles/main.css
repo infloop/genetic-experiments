@@ -1,0 +1,57 @@
+body {
+    background-color: #222222;
+    margin: 0;
+    font-family: sans-serif;
+}
+#webgl {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+}
+
+#info {
+    display: inline-block;
+    margin: 30px;
+    padding: 10px 30px;
+    color: white;
+    font-size: 20px;
+    /* font-family: sans-serif; */
+}
+
+#controls {
+    display: inline-block;
+    margin: 30px;
+    padding: 10px 30px;
+    /* background-color: HSLA(0, 0, 0.3, 1); */
+    background-color : HSLA(0, 0%, 20%, 1);
+    float: right;
+    right: 10px;
+    z-index: 100;
+    position: absolute;
+}
+
+button {
+    border: none;
+    background-color: white;
+}
+
+button:focus {
+    outline:0;
+}
+
+button:active {
+    background-color: HSLA(0, 0%, 50%, 1);
+    color: white;
+}
+
+button, input {
+    font-size: 14px;
+    padding: 6px;
+}
+input {
+    border: none;
+}
+
+.row {
+    margin: 10px;
+}

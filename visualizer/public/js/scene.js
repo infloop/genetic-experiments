@@ -1,6 +1,10 @@
+'use strict';
 
+window.app = {};
 
-module.exports = function(THREE, $, net) {
+(function (THREE, $, net) {
+    console.log(THREE);
+
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.position.z = 10;
@@ -199,9 +203,9 @@ module.exports = function(THREE, $, net) {
         return net = n;
     };
 
-    //render();
+    render();
 
-    return module.exports = {
+    app.scene  = {
         scene: scene,
         render: render,
         updateAndRender: updateAndRender,
@@ -209,4 +213,5 @@ module.exports = function(THREE, $, net) {
         setInfo: setInfo,
         setNet: setNet
     };
-};
+})(THREE, jQuery, {});
+
