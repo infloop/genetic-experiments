@@ -22,8 +22,16 @@
   },
   "homepage": "https://github.com/infloop/genetic-experiments#readme",
   "dependencies": {
+    "express": "^4.13.4",
     "genetic-js": "^0.1.14",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-filter": "^4.0.0",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3",
     "lodash": "^4.6.1",
+    "main-bower-files": "^2.11.1",
     "socket.io": "^1.4.5",
     "synaptic": "^1.0.2"
   }
