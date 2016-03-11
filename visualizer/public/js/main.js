@@ -1,22 +1,22 @@
 var batchSize, currentIteration, data, displayOpts, error, hiddenLayers, initializeOptions, intervalID, iterations, learningRate, net, resetAll, scene, setBatchSize, setLearningRate, stop, threeData, train, trainingOptions, xorData;
 
-threeData = app.threes;
+var threeData = app.threes;
 
-xorData = app.xor;
+var xorData = app.xor;
 
-data = threeData;
+var data = threeData;
 
-batchSize = 1;
+var batchSize = 1;
 
-learningRate = 0.5;
+var learningRate = 0.5;
 
-iterations = 100000;
+var iterations = 100000;
 
-currentIteration = 0;
+var currentIteration = 0;
 
-error = Infinity;
+var error = Infinity;
 
-intervalID = 0;
+var intervalID = 0;
 
 net = null;
 
